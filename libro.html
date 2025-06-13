@@ -85,17 +85,17 @@ ul li a:focus {
       width: 100%;
       height: auto;
       display: block;
-      margin: 20px auto;
+      margin: 20px 0 20px 0;
     }
 
-    .cover {
-      width: calc(100% - 400px); /* 200px margine a sinistra + 200px a destra */
-      max-width: 100vw;
-      margin: 0 auto;
-      height: 100vh; /* altezza schermo */
-      object-fit: cover;
-      display: block;
-    }
+.cover {
+  width: 100%;
+  height: 100vh; /* prende l’intera altezza dello schermo */
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  max-width: 100vw;
+}
 
     .lyrics {
       font-family: monospace, monospace;
