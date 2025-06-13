@@ -6,50 +6,6 @@
   <title>LIBRO - RAPPRESENTANTE PER CASO</title>
   <link rel="stylesheet" href="font/fonts.css" />
   <style>
-
-    ul li a {
-  color: #555555;       /* grigio leggermente più chiaro */
-  text-decoration: underline;  /* sempre sottolineati */
-}
-
-ul li a:visited,
-ul li a:hover,
-ul li a:active,
-ul li a:focus {
-  color: #555555;       /* stesso colore sempre */
-  text-decoration: underline; /* sempre sottolineati */
-  cursor: pointer;
-}
-
-
-/* Freccia "torna all'indice" */
-#back-to-index {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #e6d68c;
-  color: #444;
-  font-size: 2.5rem;
-  text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 9999;
-}
-
-#back-to-index.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-#back-to-index:hover {
-  background-color: #c099c8;
-  color: #000;
-}
-
     body {
       font-family: 'iA Writer Quattro', monospace;
       font-size: 1.3rem;
@@ -58,12 +14,43 @@ ul li a:focus {
       padding: 0 10px;
     }
 
-    img {
+    ul li a {
+      color: #555555;
+      text-decoration: underline;
+    }
+
+    ul li a:visited,
+    ul li a:hover,
+    ul li a:active,
+    ul li a:focus {
+      color: #555555;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    img:not(.cover):not(.small-img) {
       display: block;
       margin: 0 auto 20px;
       max-width: 300px;
       width: 100%;
       height: auto;
+    }
+
+    .cover {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0;
+      max-height: 100vh;
+      object-fit: contain;
+    }
+
+    .small-img {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px 0;
     }
 
     audio {
@@ -80,25 +67,7 @@ ul li a:focus {
       margin: 20px auto;
     }
 
-    .small-img {
-      max-width: 300px;
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 20px 0 20px 0;
-    }
-
-.cover {
-  width: 100%;
-  height: 100vh; /* prende l’intera altezza dello schermo */
-  object-fit: cover;
-  display: block;
-  margin: 0;
-  max-width: 100vw;
-}
-
     .lyrics {
-      font-family: monospace, monospace;
       text-align: left;
       display: inline-block;
       max-width: 90vw;
@@ -113,10 +82,37 @@ ul li a:focus {
       font-weight: bold;
     }
 
-    /* MEDIA QUERY PER TABLET E MOBILE */
+    #back-to-index {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #e6d68c;
+      color: #444;
+      font-size: 2.5rem;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 9999;
+    }
+
+    #back-to-index.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    #back-to-index:hover {
+      background-color: #c099c8;
+      color: #000;
+    }
+
+    /* Mobile styles */
     @media (max-width: 768px) {
       body {
-        margin: 20px 10px; /* margini laterali piccoli o azzerati */
+        margin: 20px 10px;
         padding: 0 10px;
       }
 
@@ -125,6 +121,10 @@ ul li a:focus {
         height: auto;
         margin: 0;
       }
+
+      .small-img {
+        margin: 20px auto;
+      }
     }
 
     @media (max-width: 400px) {
@@ -132,6 +132,7 @@ ul li a:focus {
         font-size: 0.9rem;
         max-width: 95vw;
       }
+
       audio {
         max-width: 100%;
       }
