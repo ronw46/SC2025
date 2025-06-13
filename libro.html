@@ -115,42 +115,48 @@
   right: 30px;
   background-color: #e6d68c;
   color: #444;
-  font-size: 2.5rem;
-  width: 50px;           /* larghezza fissa */
-  height: 50px;          /* altezza fissa */
-  line-height: 50px;     /* allinea verticalmente */
-  text-align: center;    /* allinea orizzontalmente */
-  text-decoration: none;
-  padding: 0;            /* togli padding */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
   z-index: 9999;
+  text-decoration: none;
 }
 
-    #back-to-index.show {
-      opacity: 1;
-      pointer-events: auto;
-    }
+#back-to-index.show {
+  opacity: 1;
+  pointer-events: auto;
+}
 
-    #back-to-index:hover {
-      background-color: #c099c8;
-      color: #000;
-    }
+#back-to-index:hover {
+  background-color: #c099c8;
+  color: #000;
+}
 
-    /* Mobile styles */
+#back-to-index svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+}
 
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
   #back-to-index {
     width: 40px;
     height: 40px;
-    line-height: 40px;
-    font-size: 2rem;
+  }
+  #back-to-index svg {
+    width: 20px;
+    height: 20px;
   }
 }
 
+    /* Mobile styles */
     
     @media (max-width: 768px) {
       body {
@@ -803,11 +809,15 @@ Ora è il rappresentante ufficiale, eletto in sua assenza, senza candidatura e s
 
   <div class="pdf-download">
   <a href="file/libro.pdf" download>
-    📄 Scarica il PDF del libro
+    📄 Scarica il libro in PDF
   </a>
 </div>
 
-<a href="#indice" id="back-to-index" title="Torna all'indice">&#8679;</a>
+<a href="#indice" id="back-to-index" aria-label="Torna all'indice">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+    <polyline points="6 15 12 9 18 15"/>
+  </svg>
+</a>
 
 <script>
   const backToIndex = document.getElementById('back-to-index');
