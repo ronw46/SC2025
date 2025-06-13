@@ -17,10 +17,14 @@
       margin: 0 200px;
     }
 
-    @media (max-width: 991px) {
-      body {
-        margin: 0 20px;
-      }
+
+@media (max-width: 768px) {
+  .cover {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+}
     }
     img {
       display: block;
@@ -41,12 +45,13 @@
       display: inline-block;
       margin: 20px auto;
     }
-	.cover {
-  width: 100vw;       /* tutta la larghezza della viewport */
-  height: auto;       /* altezza proporzionata */
-  max-width: none;    /* elimina il max-width impostato per le altre img */
-  margin: 0;          /* nessun margine */
-  display: block;     /* per evitare spazi bianchi */
+.cover {
+  width: calc(100% - 400px); /* 200px margine a sinistra + 200px a destra */
+  max-width: 100vw;
+  margin: 0 auto;
+  height: 100vh; /* altezza schermo */
+  object-fit: cover;
+  display: block;
 }
     .lyrics {
       font-family: monospace, monospace;
