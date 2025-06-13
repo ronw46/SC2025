@@ -6,6 +6,48 @@
   <title>LIBRO - RAPPRESENTANTE PER CASO</title>
   <link rel="stylesheet" href="font/fonts.css" />
   <style>
+    ul li a {
+  color: #333333; /* grigio scuro */
+  text-decoration: none;
+}
+
+ul li a:visited,
+ul li a:hover,
+ul li a:active,
+ul li a:focus {
+  color: #333333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Freccia "torna all'indice" */
+#back-to-index {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #d8b0dd;
+  color: #333;
+  font-size: 2.5rem;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+#back-to-index.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#back-to-index:hover {
+  background-color: #c099c8;
+  color: #000;
+}
+
     body {
       font-family: 'iA Writer Quattro', monospace;
       font-size: 1.3rem;
@@ -688,6 +730,19 @@ Ora è il rappresentante ufficiale, eletto in sua assenza, senza candidatura e s
 <blockquote>
   <p>“Padre (due volte), rappresentante (perché assente alla riunione), negoziatore nel triangolo genitori-maestre-bambini. Vive chiuso in una chat.”</p>
 </blockquote>
+
+<a href="#indice" id="back-to-index" title="Torna all'indice">&#8679;</a>
+
+<script>
+  const backToIndex = document.getElementById('back-to-index');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      backToIndex.classList.add('show');
+    } else {
+      backToIndex.classList.remove('show');
+    }
+  });
+</script>
 
 </body>
 </html>
