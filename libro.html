@@ -41,6 +41,13 @@
       display: inline-block;
       margin: 20px auto;
     }
+	.cover {
+  width: 100vw;       /* tutta la larghezza della viewport */
+  height: auto;       /* altezza proporzionata */
+  max-width: none;    /* elimina il max-width impostato per le altre img */
+  margin: 0;          /* nessun margine */
+  display: block;     /* per evitare spazi bianchi */
+}
     .lyrics {
       font-family: monospace, monospace;
       text-align: left;
@@ -69,7 +76,7 @@
 <body>
 
   <!-- Copertina iniziale -->
-  <img src="img/copertina-libro.jpg" alt="Copertina del libro" />
+  <img class="cover" src="img/copertina-libro.jpg" alt="Copertina Libro" />
 
 <hr />
 
