@@ -821,12 +821,21 @@ Ora è il rappresentante ufficiale, eletto in sua assenza, senza candidatura e s
 
 <script>
   const backToIndex = document.getElementById('back-to-index');
+  const target = document.getElementById('indice');
+
   window.addEventListener('scroll', () => {
     if (window.scrollY > 200) {
       backToIndex.classList.add('show');
     } else {
       backToIndex.classList.remove('show');
     }
+  });
+
+  backToIndex.addEventListener('click', (e) => {
+    e.preventDefault();
+    target.scrollIntoView({
+      behavior: 'smooth'
+    });
   });
 </script>
 
