@@ -30,6 +30,48 @@
       display: inline-block;
       margin: 20px auto;
     }
+	.chords {
+	  background-color: #f3f3f3;
+	  border-left: 5px solid #b48ec5;
+	  padding: 10px 15px;
+	  margin: 20px auto;
+	  display: inline-block;
+	  text-align: left;
+	  font-family: monospace, monospace;
+	  font-size: 1rem;
+	  line-height: 1.6;
+	  border-radius: 6px;
+	  max-width: 90vw;
+	}
+	.chord-table {
+	  margin: 20px auto;
+	  border-collapse: collapse;
+	  font-family: monospace, monospace;
+	  font-size: 1rem;
+	  max-width: 90vw;
+	}
+
+	.chord-table th, .chord-table td {
+	  border: 1px solid #ccc;
+	  padding: 10px 16px;
+	  text-align: center;
+	}
+
+	.chord-table th {
+	  background-color: #d8f3dc; /* verde pastello */
+	  color: #2d4739; /* verde scuro per testo */
+	}
+
+	.chord-table td {
+	  background-color: #fafafa;
+	}
+
+	@media (max-width: 500px) {
+	  .chord-table {
+	    font-size: 0.9rem;
+	  }
+	}
+
     .lyrics {
       font-family: monospace, monospace;
       text-align: left;
@@ -122,11 +164,50 @@ a riscriverti ogni volta gli stessi messaggi</b>
     <source src="https://files.catbox.moe/m9umff.mp3" type="audio/mpeg" />
     Il tuo browser non supporta l’audio.
   </audio>
-  <br><br>
-  <img src="img/copertina-remix.jpg" alt="Copertina remix" /><br /><br />
- <p style="color: gray; margin-top: 40px; font-size: 0.9rem;">
-  ©2025 Testo scritto da Yuri Di Prodo (sì, proprio lui), musica e arrangiamenti made by AI. Nessun umano è stato maltrattato nella produzione di questo brano.
-</p>
-  <h2>👋</h2>
+  <br><br> 
+  <img src="img/copertina-remix.jpg" alt="Copertina remix" />
+  
+   <p style="color: gray; margin-top: 40px; font-size: 0.9rem;">
+    ©2025 Testo scritto da <a href="https://yuridiprodo.github.io/" target="_blank" style="color: blue; text-decoration: underline;">Yuri Di Prodo</a>, musica e arrangiamenti made with AI. Nessun umano è stato maltrattato nella produzione di questo brano.
+  </p>
+  
+    <hr style="margin-top: 40px; margin-bottom: 20px; border: none; border-top: 2px dashed #ccc;" />
+  
+<h2>Accordi</h2>
+
+<h3>🎸 (Versione Originale)</h3>
+<table class="chord-table">
+  <tr>
+    <th>Parte</th>
+    <th>Accordi</th>
+  </tr>
+  <tr>
+    <td>Strofa</td>
+    <td>Bb – Cm</td>
+  </tr>
+  <tr>
+    <td>Ritornello</td>
+    <td>Ab – Bb – Cm – Eb</td>
+  </tr>
+</table>
+
+<h3>🌙 (Remix)</h3>
+<table class="chord-table">
+  <tr>
+    <th>Parte</th>
+    <th>Accordi</th>
+  </tr>
+  <tr>
+    <td>Strofa e ritornello</td>
+    <td>D – C# – F#m – Em</td>
+  </tr>
+  <tr>
+    <td>Chiusura</td>
+    <td>D – E – C#7 – F#m</td>
+  </tr>
+</table>
+
+<br>
+<h2>👋</h2>
 </body>
 </html>
