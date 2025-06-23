@@ -49,29 +49,32 @@
 	  font-family: monospace, monospace;
 	  font-size: 1rem;
 	  max-width: 90vw;
+	  width: fit-content;
+	  min-width: 240px;
+	}
+
+	.chord-table caption {
+	  caption-side: top;
+	  font-weight: bold;
+	  font-size: 1.1rem;
+	  margin-bottom: 8px;
+	  color: #2d4739; /* verde scuro */
+	  background-color: #d8f3dc; /* verde pastello */
+	  padding: 6px 12px;
+	  border-radius: 6px;
+	  text-align: center;
 	}
 
 	.chord-table th, .chord-table td {
-	  border: 1px solid #ccc;
+	  border: 1px solid #b5e3c1;
 	  padding: 10px 16px;
 	  text-align: center;
 	}
 
-	.chord-table th {
-	  background-color: #d8f3dc; /* verde pastello */
-	  color: #2d4739; /* verde scuro per testo */
-	}
-
 	.chord-table td {
-	  background-color: #fafafa;
+	  background-color: #ffffff;
+	  color: #333;
 	}
-
-	@media (max-width: 500px) {
-	  .chord-table {
-	    font-size: 0.9rem;
-	  }
-	}
-
     .lyrics {
       font-family: monospace, monospace;
       text-align: left;
@@ -175,37 +178,50 @@ a riscriverti ogni volta gli stessi messaggi</b>
   
 <h2>Accordi</h2>
 
-<h3>🎸 (Versione Originale)</h3>
+<h3>🎸 Versione Originale</h3>
+
 <table class="chord-table">
+  <caption>Strofa</caption>
   <tr>
-    <th>Parte</th>
-    <th>Accordi</th>
-  </tr>
-  <tr>
-    <td>Strofa</td>
-    <td>Bb – Cm</td>
-  </tr>
-  <tr>
-    <td>Ritornello</td>
-    <td>Ab – Bb – Cm – Eb</td>
+    <td>Bb</td>
+    <td>Cm</td>
+    <td>Bb</td>
+    <td>Cm</td>
   </tr>
 </table>
 
-<h3>🌙 (Remix)</h3>
 <table class="chord-table">
+  <caption>Ritornello</caption>
   <tr>
-    <th>Parte</th>
-    <th>Accordi</th>
-  </tr>
-  <tr>
-    <td>Strofa e ritornello</td>
-    <td>D – C# – F#m – Em</td>
-  </tr>
-  <tr>
-    <td>Chiusura</td>
-    <td>D – E – C#7 – F#m</td>
+    <td>Ab</td>
+    <td>Bb</td>
+    <td>Cm</td>
+    <td>Eb</td>
   </tr>
 </table>
+
+<h3>🌙 Remix</h3>
+
+<table class="chord-table">
+  <caption>Strofa e ritornello</caption>
+  <tr>
+    <td>D</td>
+    <td>C#</td>
+    <td>F#m</td>
+    <td>Em</td>
+  </tr>
+</table>
+
+<table class="chord-table">
+  <caption>Chiusura</caption>
+  <tr>
+    <td>D</td>
+    <td>E</td>
+    <td>C#7</td>
+    <td>F#m</td>
+  </tr>
+</table>
+
 
 <br>
 <h2>👋</h2>
